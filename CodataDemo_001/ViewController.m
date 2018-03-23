@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    //初始化数组
     _dataSource = [NSMutableArray array];
     [self.CDtableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
     self.CDtableView.estimatedRowHeight = 100;
