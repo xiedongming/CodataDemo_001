@@ -120,6 +120,7 @@
     
     
 }
+//更新
 - (IBAction)updata:(id)sender {
     [self insertData];
 }
@@ -233,26 +234,51 @@
 }
 
 -(void)insertData{
-    //根据 Entity名称和 NSManagedObjectContext 获取一个新的继承与 NSManageObject的子类 Student
-    Student * student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:_context];
-    student.name = [NSString stringWithFormat:@"Mr-%d",arc4random()%100];
-    student.age = arc4random()%20;
-    student.sex = arc4random()%2 == 0 ? @"美女" : @"帅哥";
-    student.height = arc4random()%180;
-    student.number = arc4random()%100;
-    //查询所有数据的请求
-    NSFetchRequest  * request = [NSFetchRequest fetchRequestWithEntityName:@"Student"];
+//    //根据 Entity名称和 NSManagedObjectContext 获取一个新的继承与 NSManageObject的子类 Student
+//    Student * student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:_context];
+//    student.name = [NSString stringWithFormat:@"Mr-%d",arc4random()%100];
+//    student.age = arc4random()%20;
+//    student.sex = arc4random()%2 == 0 ? @"美女" : @"帅哥";
+//    student.height = arc4random()%180;
+//    student.number = arc4random()%100;
+//    //查询所有数据的请求
+//    NSFetchRequest  * request = [NSFetchRequest fetchRequestWithEntityName:@"Student"];
+//
+//    NSArray * resArray = [_context executeFetchRequest:request error:nil];
+//    _dataSource = [NSMutableArray arrayWithArray:resArray];
+//    [self.CDtableView reloadData];
+//    //保存插入的数据
+//    NSError * error = nil;
+//    if ([_context save:&error]) {
+//        [self alertViewWithMessage:@"插入数据库成功"];
+//    }else{
+//        [self alertViewWithMessage:[NSString stringWithFormat:@"数据插入到数据库失败, %@",error]];
+//
+//    }
     
-    NSArray * resArray = [_context executeFetchRequest:request error:nil];
+    //创建查询请求
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Student"];
+    
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"sex = %@", @"帅哥"];
+    request.predicate = pre;
+    
+    //发送请求
+    NSArray *resArray = [_context executeFetchRequest:request error:nil];
+    
+    //修改
+    for (Student *stu in resArray) {
+        stu.name = @"且行且珍惜_iOS";
+    }
+    
     _dataSource = [NSMutableArray arrayWithArray:resArray];
     [self.CDtableView reloadData];
-    //保存插入的数据
-    NSError * error = nil;
+    
+    //保存
+    NSError *error = nil;
     if ([_context save:&error]) {
-        [self alertViewWithMessage:@"插入数据库成功"];
+        [self alertViewWithMessage:@"更新所有帅哥的的名字为“且行且珍惜_iOS”"];
     }else{
-        [self alertViewWithMessage:[NSString stringWithFormat:@"数据插入到数据库失败, %@",error]];
-
+        NSLog(@"更新数据失败, %@", error);
     }
     
     
