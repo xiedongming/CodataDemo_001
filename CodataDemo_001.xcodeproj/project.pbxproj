@@ -15,6 +15,11 @@
 		84DD94B52062589200BBD95F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD94B42062589200BBD95F /* main.m */; };
 		84DD94BF2062589200BBD95F /* CodataDemo_001Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD94BE2062589200BBD95F /* CodataDemo_001Tests.m */; };
 		84DD94CA2062589200BBD95F /* CodataDemo_001UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD94C92062589200BBD95F /* CodataDemo_001UITests.m */; };
+		84DD94D9206258D500BBD95F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84DD94D7206258D500BBD95F /* Model.xcdatamodeld */; };
+		84DD94DE20625AB300BBD95F /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD94DC20625AB300BBD95F /* Student+CoreDataClass.m */; };
+		84DD94DF20625AB300BBD95F /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD94DD20625AB300BBD95F /* Student+CoreDataProperties.m */; };
+		84DD94E220638D5800BBD95F /* luo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84DD94E020638D5700BBD95F /* luo.jpg */; };
+		84DD94E320638D5800BBD95F /* mei.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 84DD94E120638D5800BBD95F /* mei.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,13 @@
 		84DD94C52062589200BBD95F /* CodataDemo_001UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodataDemo_001UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DD94C92062589200BBD95F /* CodataDemo_001UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodataDemo_001UITests.m; sourceTree = "<group>"; };
 		84DD94CB2062589200BBD95F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DD94D8206258D500BBD95F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		84DD94DA20625AB300BBD95F /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataProperties.h"; sourceTree = "<group>"; };
+		84DD94DB20625AB300BBD95F /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataClass.h"; sourceTree = "<group>"; };
+		84DD94DC20625AB300BBD95F /* Student+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataClass.m"; sourceTree = "<group>"; };
+		84DD94DD20625AB300BBD95F /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
+		84DD94E020638D5700BBD95F /* luo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = luo.jpg; sourceTree = "<group>"; };
+		84DD94E120638D5800BBD95F /* mei.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mei.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,10 @@
 		84DD94992062589200BBD95F = {
 			isa = PBXGroup;
 			children = (
+				84DD94DA20625AB300BBD95F /* Student+CoreDataProperties.h */,
+				84DD94DB20625AB300BBD95F /* Student+CoreDataClass.h */,
+				84DD94DC20625AB300BBD95F /* Student+CoreDataClass.m */,
+				84DD94DD20625AB300BBD95F /* Student+CoreDataProperties.m */,
 				84DD94A42062589200BBD95F /* CodataDemo_001 */,
 				84DD94BD2062589200BBD95F /* CodataDemo_001Tests */,
 				84DD94C82062589200BBD95F /* CodataDemo_001UITests */,
@@ -105,6 +121,9 @@
 				84DD94A62062589200BBD95F /* AppDelegate.m */,
 				84DD94A82062589200BBD95F /* ViewController.h */,
 				84DD94A92062589200BBD95F /* ViewController.m */,
+				84DD94E020638D5700BBD95F /* luo.jpg */,
+				84DD94E120638D5800BBD95F /* mei.jpeg */,
+				84DD94D7206258D500BBD95F /* Model.xcdatamodeld */,
 				84DD94AB2062589200BBD95F /* Main.storyboard */,
 				84DD94AE2062589200BBD95F /* Assets.xcassets */,
 				84DD94B02062589200BBD95F /* LaunchScreen.storyboard */,
@@ -238,8 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DD94E320638D5800BBD95F /* mei.jpeg in Resources */,
 				84DD94B22062589200BBD95F /* LaunchScreen.storyboard in Resources */,
 				84DD94AF2062589200BBD95F /* Assets.xcassets in Resources */,
+				84DD94E220638D5800BBD95F /* luo.jpg in Resources */,
 				84DD94AD2062589200BBD95F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DD94AA2062589200BBD95F /* ViewController.m in Sources */,
+				84DD94DF20625AB300BBD95F /* Student+CoreDataProperties.m in Sources */,
 				84DD94B52062589200BBD95F /* main.m in Sources */,
 				84DD94A72062589200BBD95F /* AppDelegate.m in Sources */,
+				84DD94DE20625AB300BBD95F /* Student+CoreDataClass.m in Sources */,
+				84DD94D9206258D500BBD95F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +570,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84DD94D7206258D500BBD95F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84DD94D8206258D500BBD95F /* Model.xcdatamodel */,
+			);
+			currentVersion = 84DD94D8206258D500BBD95F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84DD949A2062589200BBD95F /* Project object */;
 }
